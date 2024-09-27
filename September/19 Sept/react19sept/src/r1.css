@@ -1,0 +1,12 @@
+body{
+    background-color: yellow;
+}
+.data{
+    color:red;
+    font-family: 'Courier New', Courier, monospace;
+}
+#data1{
+    color: blue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: underline;
+}

@@ -1,0 +1,160 @@
+/* *{
+    background-color: rgb(127, 127, 127);
+} */
+.c1{
+    background-color: rgb(207, 207, 207);
+}
+.img1{
+    height: 650px;
+}
+.home{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 100px;
+    h1{
+        font-size: 50px;
+        color: black;
+        span{
+            color: rgb(167, 45, 45);
+        }
+    }
+    p{
+        font-size: 20px;
+    }
+}
+p{
+    font-size: 23px;
+}
+#About{
+    padding-bottom: 50px;
+    padding: 80px;
+    border-radius: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: rgb(170, 170, 170);
+}
+.about{
+    margin-top: 50px;
+    width: 550px;
+}
+.aboutme{
+    text-align: center;
+    padding-bottom: 20px;
+    color: rgb(167, 45, 45);
+    text-decoration: solid 10px black;
+    
+}
+.aboutsection{
+    span{
+        color: black;
+        font-size: 28px;
+    }
+    h1{
+        color: rgb(167, 45, 45);
+    }
+}
+.education{
+    margin-top: 150px;
+    padding-bottom: 50px;
+    padding: 80px;
+    border-radius: 20px;
+    padding-top: 50px;
+    padding-bottom: 80px;
+    background-color: rgb(170, 170, 170);
+    flex-wrap: wrap;
+    justify-content: space-between;
+    h1{
+        color: rgb(167, 45, 45);
+        text-align: center;
+        text-decoration: solid black 10px;
+        padding-bottom: 40px;
+    }
+}
+.edu1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.edu{
+    padding: 50px;
+    border-radius: 20px;
+    background-color: rgb(117, 116, 116);
+    h1{
+        text-decoration: solid black 1px;
+    }
+    width: 550px;
+}
+.bach{
+    padding: 50px;
+    padding-top: 0;
+    border-radius: 20px;
+    background-color: rgb(117, 116, 116);
+    width: 562px;
+}
+.nav{
+    width: 100%;
+}
+.skills{
+    background-color: rgb(170, 170, 170);
+    margin-top: 150px;
+    padding-bottom: 50px;
+    padding: 80px;
+    border-radius: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 28px;
+    h1{
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    li{
+        list-style: square;
+    }
+}
+#Contact{
+    margin-top: 150px;
+    padding-bottom: 50px;
+    padding: 80px;
+    border-radius: 20px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    font-size: 28px;
+    background-color: rgb(170, 170, 170);
+    justify-content: space-around;
+    h1{
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}
+.contact{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+#form{
+    input{
+    background-color: rgb(214, 214, 214);
+    border: none;
+    border-radius: 10px;
+    }
+    textarea{
+        background-color: rgb(214, 214, 214);
+        border: none;
+        border-radius: 10px;
+    }
+    label{
+        font-size: 20px;
+        color: black;
+    }
+    button{
+        text-align: center;
+        background-color: rgb(167, 45, 45);
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 20px;
+        border: none;
+    }
+}
