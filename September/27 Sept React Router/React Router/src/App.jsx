@@ -121,58 +121,203 @@
 
 
 
-const App=()=>{
-  const student =[
-    {
-      "rollno":101,
-      "name":"Aadi",
-      "city":"bhopal"
-    },
-    {
-      "rollno":102,
-      "name":"Safal",
-      "city":"Indore"
-    },
-    {
-      "rollno":103,
-      "name":"good",
-      "city":"Jabalpur"
-    },
-    {
-      "rollno":104,
-      "name":"Hello",
-      "city":"Jabalpur"
-    }
-  ]
+// const App=()=>{
+//   const student =[
+//     {
+//       "rollno":101,
+//       "name":"Aadi",
+//       "city":"bhopal"
+//     },
+//     {
+//       "rollno":102,
+//       "name":"Safal",
+//       "city":"Indore"
+//     },
+//     {
+//       "rollno":103,
+//       "name":"good",
+//       "city":"Jabalpur"
+//     },
+//     {
+//       "rollno":104,
+//       "name":"Hello",
+//       "city":"Jabalpur"
+//     }
+//   ]
   
-// we can access data of array of object by
-// console.log(student[1].name)
+// // we can access data of array of object by
+// // console.log(student[1].name)
 
-  const ans =student.map((key)=>{
-    return(
-      <>
-      <tr>
-        <td>{key.rollno}</td>
-        <td>{key.name}</td>
-        <td>{key.city}</td>
-      </tr>
-      </>
-    )
-  })
+//   const ans =student.map((key)=>{
+//     return(
+//       <>
+//       <tr>
+//         <td>{key.rollno}</td>
+//         <td>{key.name}</td>
+//         <td>{key.city}</td>
+//       </tr>
+//       </>
+//     )
+//   })
 
+//   return(
+//     <>
+//     <h1>Hello </h1>
+//     <table border={"1px"}>
+//       <tr>
+//         <th>Roll No</th>
+//         <th>Name</th>
+//         <th>City</th>
+//       </tr>
+//       {ans}
+//     </table>
+//     </>
+//   )
+// }
+
+
+
+
+// 01 October
+
+
+
+// const App=()=>{
+//   const student =[
+//     {
+//       "rollno":101,
+//       "name":"Aadi",
+//       "city":"bhopal"
+//     },
+//     {
+//       "rollno":102,
+//       "name":"Safal",
+//       "city":"Indore"
+//     },
+//     {
+//       "rollno":103,
+//       "name":"Amit",
+//       "city":"Jabalpur"
+//     },
+//     {
+//       "rollno":104,
+//       "name":"Anjali",
+//       "city":"Jabalpur"
+//     }
+//   ]
+//   const ans = student.map((key)=>{
+//     return(
+//             <>
+//             <tr>
+//               <td>{key.rollno}</td>
+//               <td>{key.name}</td>
+//               <td>{key.city}</td>
+//             </tr>
+//             </>
+//           )
+//       })
+
+//   return(
+//     <>
+//     <h1>Hello</h1>
+//     <table>
+//       <th>Roll No</th>
+//       <th>Name</th>
+//       <th>City</th>
+//       {ans}
+//     </table>
+//     </>
+//   )
+// }
+
+// Making design of table in another jsx file
+
+// import Design from "./Design"
+
+// const App=()=>{
+//   const student =[
+//     {
+//       "rollno":101,
+//       "name":"Aadi",
+//       "city":"bhopal"
+//     },
+//     {
+//       "rollno":102,
+//       "name":"Safal",
+//       "city":"Indore"
+//     },
+//     {
+//       "rollno":103,
+//       "name":"Amit",
+//       "city":"Jabalpur"
+//     },
+//     {
+//       "rollno":104,
+//       "name":"Anjali",
+//       "city":"Jabalpur"
+//     }
+//   ]
+//   const ans = student.map((key)=><Design rno={key.rollno} nm={key.name} ct={key.city} />)
+
+//   return(
+//     <>
+//     <h1>Hello</h1>
+//     <table border="1px">
+//       <tr>
+//       <th>Roll No</th>
+//       <th>Name</th>
+//       <th>City</th>
+//       </tr>
+//       {ans}
+//     </table>
+//     </>
+//   )
+// }
+
+// Making design and data in another jsx file
+
+// import EmpData from "./EmpData";
+// import EmpDesign from "./EmpDesign";
+
+// const App=()=>{
+//   const ans = EmpData.map((key)=><EmpDesign eno={key.empno} enm={key.empname} edct={key.empcity} esal={key.empsalary} />)
+//   return(
+//     <>
+//     <h1>Hello</h1>
+//     <table border="1px">
+//       <tr>
+//       <th>Emp No</th>
+//       <th>Name</th>
+//       <th>City</th>
+//       <th>Salary</th>
+//       </tr>
+//       {ans}
+//     </table>
+//     </>
+//   )
+// }
+
+
+// 02 Oct
+
+const App=()=>{
+  const ans = EmpData.map((key)=><EmpDesign eno={key.empno} enm={key.empname} edct={key.empcity} esal={key.empsalary} />)
   return(
     <>
-    <h1>Hello </h1>
-    <table border={"1px"}>
+    <h1>Hello</h1>
+    <table border="1px">
       <tr>
-        <th>Roll No</th>
-        <th>Name</th>
-        <th>City</th>
+      <th>Emp No</th>
+      <th>Name</th>
+      <th>City</th>
+      <th>Salary</th>
       </tr>
       {ans}
     </table>
     </>
   )
 }
+
+
 export default App;
 
