@@ -300,20 +300,78 @@
 
 // 02 Oct
 
+// React Events 
+
+
+// const App=()=>{
+
+//   // const display=()=>{
+//   //   alert("This is my Event")
+//   // }
+
+//   // function using arguments
+//   const display=(nm)=>{
+//       alert(`my name is : ${nm}`)
+//     }
+//   return(
+//     <>
+//     <h1>React Events </h1>
+//     {/* Display is an function and we donot have to write parenthrsis () in React but when we have to write arguments in function so () is used */}
+//     {/* <button onClick={display}>Click Here</button>  */}
+//     {/* we have to write onCLick in camel case  */}
+
+//     {/* if function is having arguments so we have to pass function in arrow function */}
+//     <button onClick={()=>{display("Aatmik Kushwaha")}}>Show name</button> 
+//     </>
+//   )
+// }
+
+
+// React Event Object
+
+// const App=()=>{
+//   const display=(course,e)=>{
+//     alert(`My Course : ${course}    event object: ${e.type}`);
+//   }
+//   return(
+//     <>
+//     <h1>React Event Object</h1>
+//     {/* e is called event e will give the name of event which is used like here onClick */}
+//     <button onClick={(e)=>{display("FullStack",e)}}>Click Here</button>
+//     </>
+//   )
+// }
+
+
+// we have to use Event Object  
+// const App=()=>{
+//   const display=(nm,e)=>{
+//     // alert(e.target.name);
+//     let Name = e.target.name;
+//     let val =e.target.value;
+//     alert("Name : "+Name +  "Value : "+val);
+//   }
+//   return(
+//     <>
+//     <h1>React Event Object</h1>
+//     {/* e is called event e will give the name of event which is used like here onClick */}
+//     <button name="btn1" value="mybtn" onClick={(e)=>{display("Aadi",e)}}>Click Here</button>
+//     </>
+//   )
+// }
+
+
+
 const App=()=>{
-  const ans = EmpData.map((key)=><EmpDesign eno={key.empno} enm={key.empname} edct={key.empcity} esal={key.empsalary} />)
+  const textBoxVal=(e)=>{
+    let Name = e.target.name;
+    let val = e.target.value;
+    alert("Name : "+Name +  "Value : "+val);
+  }
   return(
     <>
-    <h1>Hello</h1>
-    <table border="1px">
-      <tr>
-      <th>Emp No</th>
-      <th>Name</th>
-      <th>City</th>
-      <th>Salary</th>
-      </tr>
-      {ans}
-    </table>
+    <h1>React Event Object</h1>
+    Enter City : <input type="text" name="city" value="Bhopal" onClick={textBoxVal} />
     </>
   )
 }
