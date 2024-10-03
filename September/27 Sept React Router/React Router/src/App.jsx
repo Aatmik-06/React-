@@ -362,11 +362,28 @@
 
 
 
+// const App=()=>{
+//   const textBoxVal=(e)=>{
+//     let Name = e.target.name;
+//     let val = e.target.value;
+//     alert("Name : "+Name +  "Value : "+val);  
+//   }
+//   return(
+//     <>
+//     <h1>React Event Object</h1>
+//     Enter City : <input type="text" name="city" value="Bhopal" onClick={textBoxVal} />
+//     </>
+//   )
+// }
+
+
+// 03 Oct
+
 const App=()=>{
   const textBoxVal=(e)=>{
     let Name = e.target.name;
     let val = e.target.value;
-    alert("Name : "+Name +  "Value : "+val);
+    alert("Name : "+Name +  "Value : "+val);  
   }
   return(
     <>
