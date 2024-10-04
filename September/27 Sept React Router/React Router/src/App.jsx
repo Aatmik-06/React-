@@ -378,17 +378,97 @@
 
 
 // 03 Oct
+// React Hooks
+
+// React use state hook
+
+// React Forms
+
+// import { useState } from "react";
+
+// const App=()=>{
+//   const [name,setName]=useState("Aadi");  // set is an method 
+//   // const myname=()=>{
+//   //   setName("Aatmik")
+//   // }
+//   return(
+//     <>
+//     <h1>React Forms | React use state hook </h1>
+//     <h1>Name :{name}</h1>
+//     {/* <button onClick={myname}>Change name</button> */}
+//     {/* or */}
+//     <button onClick={()=>{setName("Hello")}}> click</button>
+//     </>
+//   )
+// }
+
+// const App=()=>{
+//   const [color,setColor]=useState("red");  // set is an method 
+//   return(
+//     <>
+//     <h1>React Forms | React use state hook </h1>
+//     <h1 style={{color:color}} >Favourite Color :{color}</h1>
+//     <button onClick={()=>{setColor("Green")}}>Green</button>
+//     <button onClick={()=>{setColor("Blue")}}>Blue</button>
+//     <button onClick={()=>{setColor("Yellow")}}>Yellow</button>
+//     <button onClick={()=>{setColor("orange")}}>Orange</button>
+//     </>
+//   )
+// }
+
+
+
+// Counter in React
+
+// const App=()=>{
+//   const [cnt,setcnt]=useState(0);
+
+//   const myDecrement=()=>{
+//     if(cnt<1){
+//       alert("Not Allowed")
+//     }
+//     else{
+//       setcnt(cnt-1);
+//     }
+//   }
+//   return(
+//     <>
+//     <center>
+//     <h1>Counter App</h1>
+//     <h1>Count : {cnt}</h1>
+//     <button onClick={()=>{setcnt(cnt+1)}}>Increment</button>
+//     {/* <button onClick={()=>{setcnt(cnt-1)}}>Decrement</button> */}
+//     <button onClick={myDecrement}>Decrement</button>
+//     <button onClick={()=>{setcnt(0)}}>Reset</button>
+//     </center>
+//     </>
+//   )
+// }
+
+
+import { useState } from "react";
 
 const App=()=>{
-  const textBoxVal=(e)=>{
-    let Name = e.target.name;
-    let val = e.target.value;
-    alert("Name : "+Name +  "Value : "+val);  
+  const [cnt,setcnt]=useState(0);
+
+  const myDecrement=()=>{
+    if(cnt<1){
+      alert("Not Allowed")
+    }
+    else{
+      setcnt(cnt-1);
+    }
   }
   return(
     <>
-    <h1>React Event Object</h1>
-    Enter City : <input type="text" name="city" value="Bhopal" onClick={textBoxVal} />
+    <center>
+    <h1>Counter App</h1>
+    <h1>Count : {cnt}</h1>
+    <button onClick={()=>{setcnt(cnt+1)}}>Increment</button>
+    {/* <button onClick={()=>{setcnt(cnt-1)}}>Decrement</button> */}
+    <button onClick={myDecrement}>Decrement</button>
+    <button onClick={()=>{setcnt(0)}}>Reset</button>
+    </center>
     </>
   )
 }
