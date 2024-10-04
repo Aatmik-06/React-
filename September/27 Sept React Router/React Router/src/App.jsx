@@ -108,7 +108,7 @@
   // Our data will be stored in the form of array of object 
 //   return(
 //     <>
-//     <h1>Hello </h1>
+//     <h1>Hello World /h1>
 //     <ol>
 //      {ans}
 //     </ol>
@@ -306,7 +306,7 @@
 // const App=()=>{
 
 //   // const display=()=>{
-//   //   alert("This is my Event")
+//   //   alert("This is my React Event")
 //   // }
 
 //   // function using arguments
@@ -349,7 +349,7 @@
 //     // alert(e.target.name);
 //     let Name = e.target.name;
 //     let val =e.target.value;
-//     alert("Name : "+Name +  "Value : "+val);
+//     alert("Name : "+Name +  "value : "+val);
 //   }
 //   return(
 //     <>
@@ -402,6 +402,8 @@
 //   )
 // }
 
+
+
 // const App=()=>{
 //   const [color,setColor]=useState("red");  // set is an method 
 //   return(
@@ -427,7 +429,7 @@
 //     if(cnt<1){
 //       alert("Not Allowed")
 //     }
-//     else{
+//     else {
 //       setcnt(cnt-1);
 //     }
 //   }
@@ -446,33 +448,99 @@
 // }
 
 
-import { useState } from "react";
+// 04 Oct
+// React Use Effect Hook
+// import { useEffect, useState } from "react";
+// const App=()=>{
 
+//   const [cnt,setcnt]=useState(0);
+
+//   // useEffect(()=>{
+//   //   setcnt(cnt+1);
+//   // })
+
+//   // we can use settimeout to slow it 
+//   useEffect(()=>{
+//     setTimeout(()=>{
+//      setcnt(cnt+1)
+//     },2000);
+//   })
+//   return(
+//     <>
+//     <h1>React useEffect Hook :{cnt}</h1>
+//     </>
+//   )
+// }
+
+
+
+// import { useEffect, useState } from "react";
+// const App=()=>{
+
+//   const [cnt,setcnt]=useState(0);
+//   // useEffect(()=>{
+//   //   setcnt(cnt+1);
+//   // })
+
+//   // we can use settimeout to slow it 
+//   useEffect(()=>{
+//     setTimeout(()=>{
+//      setcnt(cnt+1)
+//     },2000);
+//   },[])  // when  use take an empty array[] so it will run on one render only means it will run only one time 
+//   return(
+//     <>
+//     <h1>React useEffect Hook :{cnt} </h1>
+//     </>
+//   )
+// }
+
+
+
+
+// import { useEffect, useState } from "react";
+// const App=()=>{
+
+//   const [cnt,setcnt]=useState(0);
+//   const [multi,setMulti]=useState(0);
+//   // useEffect(()=>{
+//   //   setcnt(cnt+1);
+//   // })
+
+//   // we can also change dependency  
+//   useEffect(()=>{
+//     setMulti(cnt*2);
+//   },[cnt])  
+//   return(
+//     <>
+//     <h1>React useEffect Hook </h1>
+//     <h1>Count :{cnt}</h1>
+//     <h1>Multiplication :{multi}</h1>
+//     <button onClick={()=>{setcnt(cnt+1)}}>Click Here</button>
+//     </>
+//   )
+// }
+
+
+
+// React Forms
+
+import { useEffect, useState } from "react";
 const App=()=>{
-  const [cnt,setcnt]=useState(0);
 
-  const myDecrement=()=>{
-    if(cnt<1){
-      alert("Not Allowed")
-    }
-    else{
-      setcnt(cnt-1);
-    }
-  }
+  const [name,setName]=useState("")
+  const [city,setCity]=useState("")
   return(
     <>
     <center>
-    <h1>Counter App</h1>
-    <h1>Count : {cnt}</h1>
-    <button onClick={()=>{setcnt(cnt+1)}}>Increment</button>
-    {/* <button onClick={()=>{setcnt(cnt-1)}}>Decrement</button> */}
-    <button onClick={myDecrement}>Decrement</button>
-    <button onClick={()=>{setcnt(0)}}>Reset</button>
+    <h1>React Forms </h1>
+    Enter Name : <input type="text" value={name} onChange={(e)=>{setName(e.target.value)}} /> <br />
+    Enter City : <input type="text" value={city} onChange={(e)=>{setCity(e.target.value)}}/> <br />
+    <button>Submit</button>
     </center>
     </>
   )
 }
-
 
 export default App;
 
