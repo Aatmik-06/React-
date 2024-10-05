@@ -1,5 +1,7 @@
 // 27 Sept
 
+import { useState } from "react";
+
 // Command for installing react router
 
 // npm i react-router-dom
@@ -545,15 +547,62 @@
 
 // 05 oct 
 
-import { useEffect, useState } from "react";
+// React Forms
+
+// const App=()=>{
+
+//   const [name,setName]=useState("");
+//   const [city,setCity]=useState("");
+//   const handleSubmit=()=>{
+//     console.log("student name:"+name,"student city:"+city);
+//   }
+//   return(
+//     <>
+//     <center>
+//       <h1>React Forms </h1>
+//       Enter Name: <input type="text" value={name} onChange={(e)=>{setName(e.target.value)}}/> 
+//       <br />
+//       Enter City: <input type="text" value={city} onChange={(e)=>{setCity(e.target.value)}} /> 
+//       <br />
+//       <button onClick={handleSubmit}>Submit </button>
+//     </center>
+   
+//     </>
+//   )
+// }
+
+
+
+// For Multiple input fields we can use spread operator (...) 
 const App=()=>{
+
+  const [input,setInput]=useState({});
+  const inputHandle=(e)=>{
+    let name = e.target.name;
+    let value =e.target.value;
+    // console.log({[name]:value});
+    // setInput({[name]:value});
+    setInput((values)=>({...values,[name]:value}));  
+  } 
+
+  const handleSubmit=()=>{
+    console.log(input);
+       
+   }
   return(
     <>
-   
+    <center>
+      <h1>React Forms </h1>
+     Enter Name: <input type="text" name="name" value={input.stuname} onChange={inputHandle} />    <br />
+     Enter City: <input type="text" name="city " value={input.city} onChange={inputHandle} />    <br />
+     Enter Contact: <input type="text" name="contact" value={input.contact} onChange={inputHandle} /> <br />
+     Enter Email: <input type="text" name="email" value={input.email} onChange={inputHandle} /> <br />
+     <button onClick={handleSubmit}>Submit</button>
+    </center>
     </>
   )
-}
 
+}
 
 export default App;
 
