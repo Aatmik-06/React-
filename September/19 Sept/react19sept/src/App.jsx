@@ -355,8 +355,6 @@ const App=()=>{
           <Route path='/' element={<Home/>}/>
           <Route path='/' element={<About/>}/>
           <Route path='/' element={<Contact/>}/>
-
-
         </Route>
       </Routes>
       </BrowserRouter>

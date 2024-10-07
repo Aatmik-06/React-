@@ -1,6 +1,6 @@
 // 27 Sept
 
-import { useState } from "react";
+
 
 // Command for installing react router
 
@@ -612,30 +612,175 @@ import { useState } from "react";
 
 // 07 Oct 
 
+// React AXIOS
+
+// saving data in server 
+// Accessin data from server
+
+// import axios, { Axios } from "axios";
+// import { useEffect, useState } from "react";
+
+// const App=()=>{
+
+//   const [mydata,setmydata]=useState([]); // we have used empty array inside usestate because we have to save array type of data in it 
+  
+//   const loadData=()=>{
+//     let api="http://localhost:3000/students";
+
+//     axios.get(api).then((res)=>{
+//       setmydata(res.data);
+//       console.log(res.data);  // data is keyword used to get data 
+//     })
+//   }
+//   useEffect(()=>{
+//     loadData()
+//   },[])
+
+//   const ans = mydata.map((key)=>{
+//     return(
+//       <>
+//       <tr>
+//         <td>{key.rollno}</td>
+//         <td>{key.name}</td>
+//         <td>{key.city}</td>
+//         <td>{key.fees}</td>
+//       </tr>
+//       </>
+//     )
+//   })
+  
+//   return(
+//     <>
+//     <center>
+//      <h1>React Axios </h1>
+//      <table border="1px">
+//       <tr>
+//         <th>Roll No</th>
+//         <th>Name</th>
+//         <th>City</th>
+//         <th>Fees</th>
+//       </tr>
+//       {ans}
+//      </table>
+//     </center>
+//     </>
+//   )
+// }
+
+
+
+// using asynchronous function
+// usinf async await 
+// import axios, { Axios } from "axios";
+// import { useEffect, useState } from "react";
+
+// const App=()=>{
+
+//   const [mydata,setmydata]=useState([]); // we have used empty array inside usestate because we have to save array type of data in it 
+  
+//   const loadData=async()=>{
+//     let api="http://localhost:3000/students";
+//     const response =await axios.get(api);
+//     setmydata(response.data);
+//     console.log(response);
+
+//   }
+//   useEffect(()=>{
+//     loadData()
+//   },[])
+
+//   const ans = mydata.map((key)=>{
+//     return(
+//       <>
+//       <tr>
+//         <td>{key.rollno}</td>
+//         <td>{key.name}</td>
+//         <td>{key.city}</td>
+//         <td>{key.fees}</td>
+//       </tr>
+//       </>
+//     )
+//   })
+  
+//   return(
+//     <>
+//     <center>
+//      <h1>React Axios using async await</h1>
+//      <table border="1px">
+//       <tr>
+//         <th>Roll No</th>
+//         <th>Name</th>
+//         <th>City</th>
+//         <th>Fees</th>
+//       </tr>
+//       {ans}
+//      </table>
+//     </center>
+//     </>
+//   )
+// }
+
+
+
+
+
+// using try catch with async await
+
+import axios, { Axios } from "axios";
+import { useEffect, useState } from "react";
+
 const App=()=>{
 
-  const handleSubmit=()=>{
-    console.log(input);
-       
-   }
+  const [mydata,setmydata]=useState([]); // we have used empty array inside usestate because we have to save array type of data in it 
+  
+  const loadData=async()=>{
+    let api="http://localhost:3000/students";
+    try {
+      const response =await axios.get(api);
+    setmydata(response.data);
+    console.log(response);
+    } catch (error) {
+      console.log("Server Not found");
+    }
+    
+
+  }
+  useEffect(()=>{
+    loadData()
+  },[])
+
+  const ans = mydata.map((key)=>{
+    return(
+      <>
+      <tr>
+        <td>{key.rollno}</td>
+        <td>{key.name}</td>
+        <td>{key.city}</td>
+        <td>{key.fees}</td>
+      </tr>
+      </>
+    )
+  })
+  
   return(
     <>
     <center>
-     <h1>React Forms </h1>
-     Enter Name: <input type="text" name="name" value={input.stuname} onChange={inputHandle} />   
-     <br />
-     Enter City: <input type="text" name="city " value={input.city} onChange={inputHandle} />    
-     <br />
-     Enter Contact: <input type="text" name="contact" value={input.contact} onChange={inputHandle} /> 
-     <br />
-     Enter Email: <input type="text" name="email" value={input.email} onChange={inputHandle} /> 
-     <br />
-     <button onClick={handleSubmit}>Submit</button>
+     <h1>React Axios using try catch async await </h1>
+     <table border="1px">
+      <tr>
+        <th>Roll No</th>
+        <th>Name</th>
+        <th>City</th>
+        <th>Fees</th>
+      </tr>
+      {ans}
+     </table>
     </center>
     </>
   )
-
 }
+
+
 
 export default App;
 
