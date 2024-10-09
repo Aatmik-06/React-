@@ -821,11 +821,23 @@
 
 // 09 Oct 
 
+// Searching 
+
+// task no record found 
 import React from 'react';
 
 const App=()=>{
 return(
     <>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Layout1/>}>
+      <Route path="/home" element={<Home/>}/>
+      <Route path="/insert" element={<Insert/>}/>
+      <Route path="/display" element={<Display/>}/>
+      </Route>
+    </Routes>
+    </BrowserRouter>
 
     </>
   )
