@@ -726,60 +726,110 @@
 
 // using try catch with async await
 
-import axios, { Axios } from "axios";
-import { useEffect, useState } from "react";
+// import axios, { Axios } from "axios";
+// import { useEffect, useState } from "react";
 
-const App=()=>{
+// const App=()=>{
 
-  const [mydata,setmydata]=useState([]); // we have used empty array inside usestate because we have to save array type of data in it 
+//   const [mydata,setmydata]=useState([]); // we have used empty array inside usestate because we have to save array type of data in it 
   
-  const loadData=async()=>{
-    let api="http://localhost:3000/students";
-    try {
-      const response =await axios.get(api);
-    setmydata(response.data);
-    console.log(response);
-    } catch (error) {
-      console.log("Server Not found");
-    }
+//   const loadData=async()=>{
+//     let api="http://localhost:3000/students";
+//     try {
+//       const response =await axios.get(api);
+//     setmydata(response.data);
+//     console.log(response);
+//     } catch (error) {
+//       console.log("Server Not found");
+//     }
     
 
-  }
-  useEffect(()=>{
-    loadData()
-  },[])
+//   }
+//   useEffect(()=>{
+//     loadData()
+//   },[])
 
-  const ans = mydata.map((key)=>{
-    return(
-      <>
-      <tr>
-        <td>{key.rollno}</td>
-        <td>{key.name}</td>
-        <td>{key.city}</td>
-        <td>{key.fees}</td>
-      </tr>
-      </>
-    )
-  })
+//   const ans = mydata.map((key)=>{
+//     return(
+//       <>
+//       <tr>
+//         <td>{key.rollno}</td>
+//         <td>{key.name}</td>
+//         <td>{key.city}</td>
+//         <td>{key.fees}</td>
+//       </tr>
+//       </>
+//     )
+//   })
   
-  return(
+//   return(
+//     <>
+//     <center>
+//      <h1>React Axios using try catch async await </h1>
+//      <table border="1px">
+//       <tr>
+//         <th>Roll No</th>
+//         <th>Name</th>
+//         <th>City</th>
+//         <th>Fees</th>
+//       </tr>
+//       {ans}
+//      </table>
+//     </center>
+//     </>
+//   )
+// }
+
+
+
+
+//  08 Oct
+
+// Incomplete code 
+
+// import axios, { Axios } from "axios";
+// import { useEffect, useState } from "react";
+// import { BrowserRouter ,Routes,Route } from "react-router-dom";
+// import Layout1 from "./Layout1";
+// import Home from "./pages1/Home";
+// import Insert from "./pages1/Insert";
+// import Display from "./pages1/Display";
+
+// import React from 'react';
+// import { message } from 'antd';
+
+
+// const App=()=>{
+// return(
+//     <>
+//     <BrowserRouter>
+//     <Routes>
+//       <Route path="/" element={<Layout1/>}>
+//       <Route path="/home" element={<Home/>}/>
+//       <Route path="/insert" element={<Insert/>}/>
+//       <Route path="/display" element={<Display/>}/>
+
+//       </Route>
+//     </Routes>
+//     </BrowserRouter>
+//     </>
+//   )
+// }
+
+
+
+
+// 09 Oct 
+
+import React from 'react';
+
+const App=()=>{
+return(
     <>
-    <center>
-     <h1>React Axios using try catch async await </h1>
-     <table border="1px">
-      <tr>
-        <th>Roll No</th>
-        <th>Name</th>
-        <th>City</th>
-        <th>Fees</th>
-      </tr>
-      {ans}
-     </table>
-    </center>
+
     </>
   )
 }
-
 
 
 export default App;
