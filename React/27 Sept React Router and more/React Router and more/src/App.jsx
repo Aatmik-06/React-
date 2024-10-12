@@ -787,44 +787,16 @@
 
 // Incomplete code 
 
-// import axios, { Axios } from "axios";
-// import { useEffect, useState } from "react";
-// import { BrowserRouter ,Routes,Route } from "react-router-dom";
-// import Layout1 from "./Layout1";
-// import Home from "./pages1/Home";
-// import Insert from "./pages1/Insert";
-// import Display from "./pages1/Display";
-
-// import React from 'react';
+import axios, { Axios } from "axios";
+import { useEffect, useState } from "react";
+import { BrowserRouter ,Routes,Route } from "react-router-dom";
+import Layout1 from "./Layout1";
+import Home from "./pages1/Home";
+import Insert from "./pages1/Insert";
+import Display from "./pages1/Display";
+import React from 'react';
 // import { message } from 'antd';
 
-
-// const App=()=>{
-// return(
-//     <>
-//     <BrowserRouter>
-//     <Routes>
-//       <Route path="/" element={<Layout1/>}>
-//       <Route path="/home" element={<Home/>}/>
-//       <Route path="/insert" element={<Insert/>}/>
-//       <Route path="/display" element={<Display/>}/>
-
-//       </Route>
-//     </Routes>
-//     </BrowserRouter>
-//     </>
-//   )
-// }
-
-
-
-
-// 09 Oct 
-
-// Searching 
-
-// task no record found 
-import React from 'react';
 
 const App=()=>{
 return(
@@ -835,18 +807,39 @@ return(
       <Route path="/home" element={<Home/>}/>
       <Route path="/insert" element={<Insert/>}/>
       <Route path="/display" element={<Display/>}/>
-
-
-
-
-      
       </Route>
     </Routes>
     </BrowserRouter>
-
     </>
   )
 }
+
+
+
+
+// 09 Oct 
+
+// Searching 
+
+// task no record found 
+// import React from 'react';
+
+// const App=()=>{
+// return(
+//     <>
+//     <BrowserRouter>
+//     <Routes>
+//       <Route path="/" element={<Layout1/>}>
+//       <Route path="/home" element={<Home/>}/>
+//       <Route path="/insert" element={<Insert/>}/>
+//       <Route path="/display" element={<Display/>}/>
+//       </Route>
+//     </Routes>
+//     </BrowserRouter>
+
+//     </>
+//   )
+// }
 
 
 export default App;
