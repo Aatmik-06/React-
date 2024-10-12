@@ -1,16 +1,21 @@
 import { useState } from "react";
-
-
-
+import axios from "axios";
 const Insert=()=>{
     const [input,setInput]=useState({});
     
 const handleInput=(e)=>{
     let name =e.target.name;
     let value =e.target.value;
+    setInput(values=>({...values,[name]:value}))
+    console.log(input);
 }
 const handleSubmit=()=>{
-    let api =""
+    let api ="http://localhost:3000/Employee";
+    axios.post(api,input).then((res)=>{
+        console.log(res);
+        alert("Data Successfully Saved !!!");
+    })
+    
 }
     return(
         <>

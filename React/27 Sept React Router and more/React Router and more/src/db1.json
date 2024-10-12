@@ -1,0 +1,25 @@
+{
+  "Employee": [
+    {
+      "empno": 101,
+      "name": "Aadi",
+      "email": "adi120kush@gmail.com",
+      "contact": 7845795861,
+      "id": "a5b0"
+    },
+    {
+      "id": "8cca",
+      "empno": "102",
+      "name": "Amit",
+      "email": "asas@gmail.com",
+      "contact": "7845789576"
+    },
+    {
+      "id": "72e2",
+      "empno": "103",
+      "name": "Maximus ",
+      "email": "asss@gmail.com",
+      "contact": "9857468415"
+    }
+  ]
+}
