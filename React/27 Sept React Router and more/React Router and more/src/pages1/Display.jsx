@@ -13,7 +13,7 @@ const Display=()=>{
     useEffect(()=>{
         loadData();
     },[])
-
+    
     const ans =empdata.map((key)=>{
         return(
             <>

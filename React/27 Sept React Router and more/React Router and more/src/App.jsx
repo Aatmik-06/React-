@@ -795,7 +795,8 @@ import Home from "./pages1/Home";
 import Insert from "./pages1/Insert";
 import Display from "./pages1/Display";
 import React from 'react';
-// import { message } from 'antd';
+import Search from "./pages1/Search";
+import { message } from 'antd';
 
 
 const App=()=>{
@@ -807,6 +808,7 @@ return(
       <Route path="/home" element={<Home/>}/>
       <Route path="/insert" element={<Insert/>}/>
       <Route path="/display" element={<Display/>}/>
+      <Route path="/search" element={<Search/>}/>
       </Route>
     </Routes>
     </BrowserRouter>
