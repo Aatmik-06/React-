@@ -30,24 +30,25 @@ const Search=()=>{
             )
         }
     })
-        
-    return(
-        <>
-        <h1>Search Employee Records </h1>
-        Type Emp Name <input type="text" value={empname} onChange={handleChange} />
-
-        <hr />
-        <table border="10px">
-            <tr>
-                <th>Emp No.</th>
-                <th>Emp Name</th>
-                <th>Emp Email</th>
-                <th>Contact</th>
-            </tr>
-            {ans}
-        </table>
-        </>
-    )
+    
+    if(handleChange.value!=" "){
+        return(
+            <>
+            <h1>Search Employee Records </h1>
+            Type Emp Name <input type="text" value={empname} onChange={handleChange} />
+            <hr />
+            <table border="10px">
+                <tr>
+                    <th>Emp No.</th>
+                    <th>Emp Name</th>
+                    <th>Emp Email</th>
+                    <th>Contact</th>
+                </tr>
+                {ans}
+            </table>
+            </>
+        )
+   }
 }
 
 export default Search
