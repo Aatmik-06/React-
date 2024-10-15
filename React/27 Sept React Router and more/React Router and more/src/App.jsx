@@ -846,6 +846,9 @@
 
 // 15 Oct 
 
+// Edit and delete data 
+// and using put 
+// prevent default is used when form page is getting reload and when we use prevent default so our form page will not get reloaded  
 
 import axios, { Axios } from "axios";
 import { useEffect, useState } from "react";
@@ -856,6 +859,7 @@ import Insert from "./pages1/Insert";
 import Display from "./pages1/Display";
 import React from 'react';
 import Search from "./pages1/Search";
+import Addemp from "./pages1/addemp";
 import { message } from 'antd';
 
 
@@ -869,6 +873,7 @@ return(
       <Route path="/insert" element={<Insert/>}/>
       <Route path="/display" element={<Display/>}/>
       <Route path="/search" element={<Search/>}/>
+      <Route path="/addemp" element={<Addemp/>}/>
       </Route>
     </Routes>
     </BrowserRouter>
