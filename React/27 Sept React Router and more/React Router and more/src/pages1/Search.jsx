@@ -13,8 +13,8 @@ const Search=()=>{
         })
     }
     const ans=mydata.map((key)=>{
-        let str = key.name;
-        let mystatus = str.includes(empname);
+        let str = key.name.toLowerCase();
+        let mystatus = str.includes(empname.toLowerCase());
         console.log(mystatus);
         if(mystatus)
         {
