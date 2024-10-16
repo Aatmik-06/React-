@@ -850,36 +850,56 @@
 // and using put 
 // prevent default is used when form page is getting reload and when we use prevent default so our form page will not get reloaded  
 
-import axios, { Axios } from "axios";
-import { useEffect, useState } from "react";
-import { BrowserRouter ,Routes,Route } from "react-router-dom";
-import Layout1 from "./Layout1";
-import Home from "./pages1/Home";
-import Insert from "./pages1/Insert";
-import Display from "./pages1/Display";
-import React from 'react';
-import Search from "./pages1/Search";
-import Addemp from "./pages1/addemp";
-import { message } from 'antd';
+// import axios, { Axios } from "axios";
+// import { useEffect, useState } from "react";
+// import { BrowserRouter ,Routes,Route } from "react-router-dom";
+// import Layout1 from "./Layout1";
+// import Home from "./pages1/Home";
+// import Insert from "./pages1/Insert";
+// import Display from "./pages1/Display";
+// import React from 'react';
+// import Search from "./pages1/Search";
+// import Addemp from "./pages1/addemp";
+// import EditData from "./pages1/EditData";
+// import { message } from 'antd';
 
 
+// const App=()=>{
+// return(
+//     <>
+//     <BrowserRouter>
+//     <Routes>
+//       <Route path="/" element={<Layout1/>}>
+//       <Route path="/home" element={<Home/>}/>
+//       <Route path="/insert" element={<Insert/>}/>
+//       <Route path="/display" element={<Display/>}/>
+//       <Route path="/search" element={<Search/>}/>
+//       <Route path="/addemp" element={<Addemp/>}/>
+//       </Route>
+//     </Routes>
+//     </BrowserRouter>
+//     </>
+//   )
+// }
+
+
+// export default App;
+
+
+// React use state Hook
+// props drilling 
+// contest Api
+import Comp1 from "./Components/Comp1";
+import { useState } from "react";
 const App=()=>{
-return(
+  const [user ,setuser]=useState("Aadi");
+  return(
     <>
-    <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Layout1/>}>
-      <Route path="/home" element={<Home/>}/>
-      <Route path="/insert" element={<Insert/>}/>
-      <Route path="/display" element={<Display/>}/>
-      <Route path="/search" element={<Search/>}/>
-      <Route path="/addemp" element={<Addemp/>}/>
-      </Route>
-    </Routes>
-    </BrowserRouter>
+    <h1>Welcome:{user} </h1>
+    <Comp1 user={user}/> 
     </>
   )
 }
 
-
 export default App;
+

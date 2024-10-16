@@ -1,13 +1,6 @@
 {
   "Employee": [
     {
-      "empno": 101,
-      "name": "Aadi",
-      "email": "adi120kush@gmail.com",
-      "contact": 7845795861,
-      "id": "a5b0"
-    },
-    {
       "id": "8cca",
       "empno": "102",
       "name": "Amit",
@@ -20,6 +13,13 @@
       "name": "Max ",
       "email": "asss@gmail.com",
       "contact": "9857468415"
+    },
+    {
+      "id": "f29b",
+      "empno": "104",
+      "name": "Safal",
+      "email": "xyz@gmail.com",
+      "contact": "7457896857"
     }
   ]
 }
