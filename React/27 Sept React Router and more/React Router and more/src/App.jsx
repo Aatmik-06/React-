@@ -886,20 +886,56 @@
 // export default App;
 
 
+
+
+// 16 Oct
+
 // React use state Hook
 // props drilling 
-// contest Api
+
+// import Comp1 from "./Components/Comp1";
+// import { useState } from "react";
+// const App=()=>{
+//   const [user ,setuser]=useState("Aadi");
+//   return(
+//     <>
+//     <h1>Welcome:{user} </h1>
+//     <Comp1 user={user}/> 
+//     </>
+//   )
+// }
+
+
+
+
+
+
+
+// 17 Oct  
+
+// Global state management 
+
+// Context Api
+
+// import { createContext } from "react";
+
 import Comp1 from "./Components/Comp1";
-import { useState } from "react";
+import { useState , createContext} from "react";
+
+const MyContext = createContext();
+
 const App=()=>{
-  const [user ,setuser]=useState("Aadi");
+  const [user,setuser]=useState("Aadi");
   return(
     <>
     <h1>Welcome:{user} </h1>
-    <Comp1 user={user}/> 
+    <MyContext.Provider value={{user}}>
+    <Comp1/>
+    </MyContext.Provider>
     </>
   )
 }
 
 export default App;
+export {MyContext};
 
