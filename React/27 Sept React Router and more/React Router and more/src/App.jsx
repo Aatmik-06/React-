@@ -919,23 +919,48 @@
 
 // import { createContext } from "react";
 
-import Comp1 from "./Components/Comp1";
-import { useState , createContext} from "react";
+// import Comp1 from "./Components/Comp1";
+// import { useState , createContext} from "react";
 
-const MyContext = createContext();
+// const MyContext = createContext();
+
+// const App=()=>{
+//   const [user,setuser]=useState("Aadi");
+//   return(
+//     <>
+//     <h1>Welcome:{user} </h1>
+//     <MyContext.Provider value={{user}}>
+//     <Comp1/>
+//     </MyContext.Provider>
+//     </>
+//   )
+// }
+
+
+
+// Another Example of Context 
+ 
+// Using Buttons to change values
+
+import { useState , createContext} from "react";
+import ContextEg from "./ContextEg";
+
+const userContext = createContext();
 
 const App=()=>{
-  const [user,setuser]=useState("Aadi");
+  const [user,setuser]=useState("Safal");
   return(
     <>
+    <button onClick={()=>{setuser("Aadi")}}>Click To Change</button>
     <h1>Welcome:{user} </h1>
-    <MyContext.Provider value={{user}}>
-    <Comp1/>
-    </MyContext.Provider>
+    <userContext.Provider value={{user,setuser}}>
+    <ContextEg/>
+    </userContext.Provider>
     </>
   )
 }
 
+
 export default App;
-export {MyContext};
+export {userContext};
 
