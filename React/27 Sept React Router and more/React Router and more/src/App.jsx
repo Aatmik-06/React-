@@ -942,25 +942,101 @@
  
 // Using Buttons to change values
 
-import { useState , createContext} from "react";
-import ContextEg from "./ContextEg";
+// import { useState , createContext} from "react";
+// import ContextEg from "./ContextEg";
 
-const userContext = createContext();
+// const userContext = createContext();
+
+// const App=()=>{
+//   const [user,setuser]=useState("Safal");
+//   return(
+//     <>
+//     <button onClick={()=>{setuser("Aadi")}}>Click To Change</button>
+//     <h1>Welcome:{user} </h1>
+//     <userContext.Provider value={{user,setuser}}>
+//     <ContextEg/>
+//     </userContext.Provider>
+//     </>
+//   )
+// }
+
+
+// export default App;
+// export {userContext};
+
+
+
+
+
+
+
+
+// 18 Oct 
+
+
+
+
+// import { useState , createContext} from "react";
+// import ContextEg from "./ContextEg";
+
+// const userContext = createContext();
+
+// const App=()=>{
+//   const [user,setuser]=useState("Safal");
+//   return(
+//     <>
+//     <button onClick={()=>{setuser("Aadi")}}>Click To Change</button>
+//     <h1>Welcome:{user} </h1>
+//     <userContext.Provider value={{user,setuser}}>
+//     <ContextEg/>
+//     </userContext.Provider>
+//     </>
+//   )
+// }
+
+
+// export default App;
+// export {userContext};
+
+
+// 21 Oct 
+
+// making counter
+// using context api
+
+
+// import { useContext } from "react";
+// import Counter from "./Counter" ;
+
+// const App=()=>{
+//   return(
+//     <>
+//     <center>
+//     <Counter/>
+//     </center>
+//     </>
+//   )
+// }
+
+
+
+// making Color change 
+// using Context Api
+import { useContext } from "react";
+import BgColor from "./BgColor";
 
 const App=()=>{
-  const [user,setuser]=useState("Safal");
   return(
     <>
-    <button onClick={()=>{setuser("Aadi")}}>Click To Change</button>
-    <h1>Welcome:{user} </h1>
-    <userContext.Provider value={{user,setuser}}>
-    <ContextEg/>
-    </userContext.Provider>
+    <center>
+    <BgColor/>
+    </center>
     </>
   )
 }
 
 
+
 export default App;
-export {userContext};
+
 
