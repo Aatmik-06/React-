@@ -1022,21 +1022,42 @@
 
 // making Color change 
 // using Context Api
+// import { useContext } from "react";
+// import BgColor from "./BgColor";
+
+// const App=()=>{
+//   return(
+//     <>
+//     <center>
+//     <BgColor/>
+//     </center>
+//     </>
+//   )
+// }
+
+
+
+
+
+// 25 Oct 
+// Login using Context 
+
 import { useContext } from "react";
-import BgColor from "./BgColor";
+import AuthApp from "./AuthApp";
+import UnAuthApp from "./UnAuthApp";
+import { myloginContext } from "./LoginContext";
 
 const App=()=>{
+  const {user} = useContext(myloginContext);
   return(
     <>
     <center>
-    <BgColor/>
+      <h1>Welcome to Login System</h1>
+      {user.auth?<UnAuthApp/>:<AuthApp/>}
     </center>
     </>
   )
 }
-
-
-
 export default App;
 
 
